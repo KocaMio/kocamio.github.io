@@ -1,0 +1,27 @@
+<html>
+<head>
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script type="text/javascript">
+    window.onload = () => {
+        document.getElementById("testButton").addEventListener('click', () => {
+            alert('456');
+        });
+        liff.init(
+            data => {
+                console.log(123);
+                // Now you can call LIFF API
+                const userId = data.context.userId;
+            },
+            err => {
+                // LIFF initialization failed
+            }
+        );
+    }
+    </script>
+</head>
+<body>
+    <a href="line://ti/p/@mhi7739e">Add Friend</a>
+    <a href="">Line Login</a>
+    <button id="testButton">test</button>
+</body>
+</html>
